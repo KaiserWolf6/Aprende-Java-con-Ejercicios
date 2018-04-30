@@ -1,19 +1,29 @@
 /**
- *Ejercicio 1 de variables del libro Aprende Java con Ejercicios
+ *Ejercicio 1 de Lectura de datos de Aprende Java con Ejercicios
 */
+//This program ask 2 numbers to user then they are multiply for themselves
+import java.util.Scanner;
+
 public class Ejercicio1 {
 	public static void main(String[] args) {
-		int x = 144;
-		int y = 999;
-		int suma, resta, multi;
-		double div;
-		suma = x + y;
-		resta = y - x;
-		multi = x * y;
-		div = (double)y / (double)x;
-		System.out.println("El resultado de la suma es: " + suma);
-		System.out.println("El resultado de la resta es: "  + resta);
-		System.out.println("El resultado de la multi es: " + multi);
-		System.out.println("El resultado de la div es: " + div);
+		/**String nombre;
+		System.out.print("Por favor, dime cómo te llamas: ");
+		nombre = System.console().readLine();
+		System.out.println("Hola " + nombre + ", ¡encantado de conocerte!");*/
+		//Solution 1
+		System.out.println("Gimme one number: ");
+		int uno = Integer.parseInt(System.console().readLine());
+		System.out.println("Gimme another number: ");
+		int dos = Integer.parseInt(System.console().readLine());
+		int total = uno * dos;
+		System.out.println("Result: " + total);
+		//Solution 2
+		Scanner s = new Scanner(System.in);
+		System.out.println("Gimme one number: ");
+		int one = s.nextInt();
+		System.out.println("Gimme another number: ");
+		int two = s.nextInt();
+		int result = one * two;
+		System.out.println("Result: " + result);
 	}
 }
